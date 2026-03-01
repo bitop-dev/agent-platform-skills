@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate registry.json
+        run: |
+          python3 -c "
+          import json, sys
+          with open('registry.json') as f:
+              data = json.load(f)
+          
+          assert 'version' in data, 'Missing version'
+          assert 'skills' in data, 'Missing skills'
+          
+          for skill in data['skills']:
+              name = skill.get('name', 'unknown')
+              assert 'name' in skill, f'Skill missing name'
+              assert 'description' in skill, f'{name}: missing description'
+              assert 'path' in skill, f'{name}: missing path'
+              print(f'  ✓ {name}')
+          
+          print(f'\n✅ Registry valid: {len(data[\"skills\"])} skills')
+          "
+
+      - name: Validate SKILL.md files exist
+        run: |
+          for dir in skills/*/; do
+            skill_name=$(basename "$dir")
+            if [ ! -f "$dir/SKILL.md" ]; then
+              echo "❌ Missing SKILL.md in $dir"
+              exit 1
+            fi
+            echo "✓ $skill_name/SKILL.md"
+          done
+          echo ""
+          echo "✅ All skills have SKILL.md"
+
+      - name: Check WASM tools have .wasm files
+        run: |
+          count=0
+          for dir in skills/*/tools/; do
+            if ls "$dir"*.wasm 1>/dev/null 2>&1; then
+              count=$((count + 1))
+              echo "✓ $(dirname $dir | xargs basename) has WASM tools"
+            fi
+          done
+          echo ""
+          echo "✅ Found $count skills with WASM tools"
