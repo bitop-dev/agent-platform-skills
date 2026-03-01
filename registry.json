@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-03-01T09:50:00Z",
+  "skills": [
+    {
+      "name": "web_search",
+      "version": "0.1.0",
+      "path": "skills/web_search",
+      "description": "Search the web via DuckDuckGo (pluggable backend)",
+      "author": "platform-team",
+      "tags": ["web", "search", "research"],
+      "tier": "community",
+      "has_tools": true,
+      "requires_bins": ["python3"],
+      "requires_env": []
+    },
+    {
+      "name": "web_fetch",
+      "version": "0.1.0",
+      "path": "skills/web_fetch",
+      "description": "Fetch a URL, extract readable content as markdown",
+      "author": "platform-team",
+      "tags": ["web", "fetch", "research"],
+      "tier": "community",
+      "has_tools": true,
+      "requires_bins": ["python3"],
+      "requires_env": []
+    },
+    {
+      "name": "github",
+      "version": "0.1.0",
+      "path": "skills/github",
+      "description": "GitHub issues, PRs, CI via gh CLI",
+      "author": "platform-team",
+      "tags": ["code", "vcs", "github"],
+      "tier": "community",
+      "has_tools": true,
+      "requires_bins": ["gh"],
+      "requires_env": []
+    },
+    {
+      "name": "summarize",
+      "version": "0.1.0",
+      "path": "skills/summarize",
+      "description": "Summarize long text into concise output",
+      "author": "platform-team",
+      "tags": ["text", "analysis", "research"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "report",
+      "version": "0.1.0",
+      "path": "skills/report",
+      "description": "Structure output into formatted markdown reports",
+      "author": "platform-team",
+      "tags": ["output", "formatting", "reports"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    }
+  ]
+}
