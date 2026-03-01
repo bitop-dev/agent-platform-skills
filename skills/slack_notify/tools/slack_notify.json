@@ -1,0 +1,14 @@
+{
+  "name": "slack_notify",
+  "description": "Post a message to a Slack channel via webhook URL",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "webhook_url": { "type": "string", "description": "Slack incoming webhook URL" },
+      "text": { "type": "string", "description": "Message text (supports Slack mrkdwn)" },
+      "channel": { "type": "string", "description": "Override channel (optional)" },
+      "username": { "type": "string", "description": "Override bot username (optional)" }
+    },
+    "required": ["webhook_url", "text"]
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-03-01T09:50:00Z",
+  "version": "1.1.0",
+  "updated_at": "2026-03-01T16:40:00Z",
   "skills": [
     {
       "name": "web_search",
@@ -57,6 +57,66 @@
       "description": "Structure output into formatted markdown reports",
       "author": "platform-team",
       "tags": ["output", "formatting", "reports"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "code_review",
+      "version": "1.0.0",
+      "path": "skills/code_review",
+      "description": "Systematic code review with actionable feedback",
+      "author": "platform-team",
+      "tags": ["code", "review", "quality", "security"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "data_extract",
+      "version": "1.0.0",
+      "path": "skills/data_extract",
+      "description": "Extract structured data from unstructured text",
+      "author": "platform-team",
+      "tags": ["data", "extraction", "parsing", "structured"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "slack_notify",
+      "version": "1.0.0",
+      "path": "skills/slack_notify",
+      "description": "Post messages to Slack via incoming webhook",
+      "author": "platform-team",
+      "tags": ["slack", "notification", "webhook", "messaging"],
+      "tier": "community",
+      "has_tools": true,
+      "requires_bins": ["python3"],
+      "requires_env": []
+    },
+    {
+      "name": "write_doc",
+      "version": "1.0.0",
+      "path": "skills/write_doc",
+      "description": "Write clear technical documentation",
+      "author": "platform-team",
+      "tags": ["documentation", "technical-writing", "markdown"],
+      "tier": "community",
+      "has_tools": false,
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "debug_assist",
+      "version": "1.0.0",
+      "path": "skills/debug_assist",
+      "description": "Systematic debugging methodology for finding and fixing bugs",
+      "author": "platform-team",
+      "tags": ["debugging", "troubleshooting", "errors", "bugs"],
       "tier": "community",
       "has_tools": false,
       "requires_bins": [],
