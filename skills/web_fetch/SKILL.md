@@ -1,29 +1,25 @@
 ---
 name: web_fetch
-version: 0.1.0
+version: 2.0.0
 description: "Fetch a webpage and extract readable content as markdown. Use when: you have a URL and need the full page content — after web_search, reading documentation, or following a link. NOT for: JSON APIs (use http_fetch core tool), local files (use read_file), or when the web_search snippet already answers the question."
 author: platform-team
 tags: [web, fetch, research]
-emoji: 🌐
+emoji: "🌐"
 always: false
-
-requires:
-  bins: [python3]
+runtime: wasm
 
 config:
   max_chars:
     type: integer
     default: 20000
     description: "Maximum characters to return. Truncates long pages to avoid context overflow."
-  include_links:
-    type: boolean
-    default: true
-    description: "Preserve hyperlinks in markdown output"
 ---
 
 # Web Fetch
 
 Fetch a URL and return the page's main content as clean markdown. Strips navigation, ads, scripts, and boilerplate — returns only the readable article/page content.
+
+Runs as a sandboxed WebAssembly module — no Python, no pip, no BeautifulSoup, no external dependencies. Uses regex-based HTML extraction compiled to WASM.
 
 ## When to Use
 
@@ -45,3 +41,9 @@ Fetch a URL and return the page's main content as clean markdown. Strips navigat
 2. **Use `max_chars` wisely** — For quick lookups, 5000 chars is usually enough. For full documentation pages, use the default 20000
 3. **One page at a time** — Don't fetch 10 URLs in parallel. Read one, see if it answers the question, then fetch another only if needed
 4. **Watch for errors** — Some sites block automated requests. If a fetch fails, try a different URL from your search results
+
+## Sandbox Requirements
+
+- **Network**: Target URL's host must be in AllowedHosts (or use `["*"]` wildcard)
+- **Filesystem**: none required
+- **Dependencies**: none — single .wasm binary

@@ -1,41 +1,57 @@
 {
-  "version": "1.1.0",
-  "updated_at": "2026-03-01T16:40:00Z",
+  "version": "2.0.0",
+  "updated_at": "2026-03-01T19:30:00Z",
   "skills": [
     {
       "name": "web_search",
-      "version": "0.1.0",
+      "version": "2.0.0",
       "path": "skills/web_search",
-      "description": "Search the web via DuckDuckGo (pluggable backend)",
+      "description": "Search the web via DuckDuckGo (WASM sandboxed)",
       "author": "platform-team",
       "tags": ["web", "search", "research"],
       "tier": "community",
+      "runtime": "wasm",
       "has_tools": true,
-      "requires_bins": ["python3"],
+      "requires_bins": [],
       "requires_env": []
     },
     {
       "name": "web_fetch",
-      "version": "0.1.0",
+      "version": "2.0.0",
       "path": "skills/web_fetch",
-      "description": "Fetch a URL, extract readable content as markdown",
+      "description": "Fetch a URL, extract readable content as markdown (WASM sandboxed)",
       "author": "platform-team",
       "tags": ["web", "fetch", "research"],
       "tier": "community",
+      "runtime": "wasm",
       "has_tools": true,
-      "requires_bins": ["python3"],
+      "requires_bins": [],
       "requires_env": []
     },
     {
       "name": "github",
-      "version": "0.1.0",
+      "version": "2.0.0",
       "path": "skills/github",
-      "description": "GitHub issues, PRs, CI via gh CLI",
+      "description": "GitHub issues and PRs via REST API (WASM sandboxed)",
       "author": "platform-team",
       "tags": ["code", "vcs", "github"],
       "tier": "community",
+      "runtime": "wasm",
       "has_tools": true,
-      "requires_bins": ["gh"],
+      "requires_bins": [],
+      "requires_env": []
+    },
+    {
+      "name": "slack_notify",
+      "version": "2.0.0",
+      "path": "skills/slack_notify",
+      "description": "Post messages to Slack via incoming webhook (WASM sandboxed)",
+      "author": "platform-team",
+      "tags": ["slack", "notification", "webhook", "messaging"],
+      "tier": "community",
+      "runtime": "wasm",
+      "has_tools": true,
+      "requires_bins": [],
       "requires_env": []
     },
     {
@@ -84,18 +100,6 @@
       "tier": "community",
       "has_tools": false,
       "requires_bins": [],
-      "requires_env": []
-    },
-    {
-      "name": "slack_notify",
-      "version": "1.0.0",
-      "path": "skills/slack_notify",
-      "description": "Post messages to Slack via incoming webhook",
-      "author": "platform-team",
-      "tags": ["slack", "notification", "webhook", "messaging"],
-      "tier": "community",
-      "has_tools": true,
-      "requires_bins": ["python3"],
       "requires_env": []
     },
     {
