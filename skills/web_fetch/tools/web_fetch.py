@@ -84,8 +84,8 @@ def main():
         print(json.dumps({"content": f"Invalid input JSON: {e}", "is_error": True}))
         return
 
-    args = inp.get("arguments", {})
-    config = inp.get("config", {})
+    args = inp.get("arguments", {}) or {}
+    config = inp.get("config", {}) or {}
 
     url = args.get("url", "").strip()
     if not url:

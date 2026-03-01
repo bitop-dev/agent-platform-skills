@@ -20,13 +20,17 @@ import sys
 
 
 def search_ddg(query: str, max_results: int) -> list[dict]:
-    """DuckDuckGo search via duckduckgo-search library."""
+    """DuckDuckGo search via ddgs library (or legacy duckduckgo-search)."""
+    DDGS = None
     try:
-        from duckduckgo_search import DDGS
+        from ddgs import DDGS
     except ImportError:
-        raise RuntimeError(
-            "duckduckgo-search not installed. Run: pip install duckduckgo-search"
-        )
+        try:
+            from duckduckgo_search import DDGS
+        except ImportError:
+            raise RuntimeError(
+                "ddgs not installed. Run: pip install ddgs"
+            )
 
     results = []
     with DDGS() as ddgs:
@@ -193,8 +197,8 @@ def main():
         print(json.dumps({"content": f"Invalid input JSON: {e}", "is_error": True}))
         return
 
-    args = inp.get("arguments", {})
-    config = inp.get("config", {})
+    args = inp.get("arguments", {}) or {}
+    config = inp.get("config", {}) or {}
 
     query = args.get("query", "").strip()
     if not query:
