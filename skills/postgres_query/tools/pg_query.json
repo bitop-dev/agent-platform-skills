@@ -1,0 +1,1 @@
+{"name":"pg_query","description":"Execute a read-only SQL query against PostgreSQL","parameters":{"type":"object","properties":{"query":{"type":"string","description":"SQL query (SELECT only)"},"limit":{"type":"integer","description":"Max rows to return (default 100)"}},"required":["query"]}}

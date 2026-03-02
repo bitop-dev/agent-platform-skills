@@ -1,0 +1,1 @@
+{"name":"pd_resolve","description":"Resolve a PagerDuty incident","parameters":{"type":"object","properties":{"incident_id":{"type":"string","description":"Incident ID to resolve"}},"required":["incident_id"]}}

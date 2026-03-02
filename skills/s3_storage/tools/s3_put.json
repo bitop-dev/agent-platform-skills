@@ -1,0 +1,1 @@
+{"name":"s3_put","description":"Upload content to S3","parameters":{"type":"object","properties":{"key":{"type":"string","description":"Object key (path in bucket)"},"content":{"type":"string","description":"Content to upload"},"content_type":{"type":"string","description":"MIME type (default: text/plain)"}},"required":["key","content"]}}

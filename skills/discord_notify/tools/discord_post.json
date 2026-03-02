@@ -1,0 +1,16 @@
+{
+  "name": "discord_post",
+  "description": "Post a message to a Discord channel via webhook",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "webhook_url": { "type": "string", "description": "Discord webhook URL" },
+      "content": { "type": "string", "description": "Message text (supports markdown)" },
+      "username": { "type": "string", "description": "Override bot username (optional)" },
+      "embed_title": { "type": "string", "description": "Embed title (optional)" },
+      "embed_description": { "type": "string", "description": "Embed description (optional)" },
+      "embed_color": { "type": "integer", "description": "Embed color as decimal (optional, e.g. 16750848 for amber)" }
+    },
+    "required": ["webhook_url", "content"]
+  }
+}

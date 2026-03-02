@@ -1,0 +1,1 @@
+{"name":"notion_search","description":"Search Notion pages and databases","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Search query"},"filter":{"type":"string","description":"Filter type: page or database (optional)"}},"required":["query"]}}

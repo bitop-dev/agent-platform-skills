@@ -1,0 +1,1 @@
+{"name":"notion_create_page","description":"Create a new Notion page","parameters":{"type":"object","properties":{"parent_id":{"type":"string","description":"Parent page or database ID"},"title":{"type":"string","description":"Page title"},"content":{"type":"string","description":"Page content (markdown, will be converted to blocks)"}},"required":["parent_id","title"]}}

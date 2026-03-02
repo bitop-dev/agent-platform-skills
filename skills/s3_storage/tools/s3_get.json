@@ -1,0 +1,1 @@
+{"name":"s3_get","description":"Download an object from S3","parameters":{"type":"object","properties":{"key":{"type":"string","description":"Object key to download"}},"required":["key"]}}

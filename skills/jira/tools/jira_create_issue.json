@@ -1,0 +1,17 @@
+{
+  "name": "jira_create_issue",
+  "description": "Create a new Jira issue",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "project": { "type": "string", "description": "Project key (e.g. PROJ)" },
+      "summary": { "type": "string", "description": "Issue title" },
+      "description": { "type": "string", "description": "Issue description (plain text)" },
+      "issue_type": { "type": "string", "description": "Issue type: Bug, Task, Story, Epic (default: Task)" },
+      "priority": { "type": "string", "description": "Priority: Highest, High, Medium, Low, Lowest (default: Medium)" },
+      "assignee": { "type": "string", "description": "Assignee account ID (optional)" },
+      "labels": { "type": "string", "description": "Comma-separated labels (optional)" }
+    },
+    "required": ["project", "summary"]
+  }
+}

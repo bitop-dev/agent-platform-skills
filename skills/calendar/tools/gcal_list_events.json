@@ -1,0 +1,1 @@
+{"name":"gcal_list_events","description":"List upcoming Google Calendar events","parameters":{"type":"object","properties":{"calendar_id":{"type":"string","description":"Calendar ID (default: primary)"},"max_results":{"type":"integer","description":"Max events to return (default 10)"},"time_min":{"type":"string","description":"Start time ISO8601 (default: now)"}}}}

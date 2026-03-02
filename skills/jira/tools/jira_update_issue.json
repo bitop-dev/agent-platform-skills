@@ -1,0 +1,15 @@
+{
+  "name": "jira_update_issue",
+  "description": "Update an existing Jira issue (summary, description, status, assignee)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "issue_key": { "type": "string", "description": "Issue key (e.g. PROJ-123)" },
+      "summary": { "type": "string", "description": "New summary (optional)" },
+      "description": { "type": "string", "description": "New description (optional)" },
+      "transition": { "type": "string", "description": "Transition name to move issue (e.g. 'Done', 'In Progress')" },
+      "assignee": { "type": "string", "description": "New assignee account ID (optional)" }
+    },
+    "required": ["issue_key"]
+  }
+}

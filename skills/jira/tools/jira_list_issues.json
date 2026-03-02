@@ -1,0 +1,12 @@
+{
+  "name": "jira_list_issues",
+  "description": "Search Jira issues using JQL (Jira Query Language)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "jql": { "type": "string", "description": "JQL query (e.g. 'project = PROJ AND status = Open')" },
+      "max_results": { "type": "integer", "description": "Maximum results to return (default 20)" }
+    },
+    "required": ["jql"]
+  }
+}

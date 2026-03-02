@@ -1,0 +1,1 @@
+{"name":"pg_schema","description":"Get the schema of a PostgreSQL table","parameters":{"type":"object","properties":{"table":{"type":"string","description":"Table name to inspect"},"schema":{"type":"string","description":"Schema name (default: public)"}},"required":["table"]}}

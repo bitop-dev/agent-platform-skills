@@ -1,0 +1,14 @@
+{
+  "name": "send_email",
+  "description": "Send an email via Resend API",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "to": { "type": "string", "description": "Recipient email address" },
+      "subject": { "type": "string", "description": "Email subject line" },
+      "body": { "type": "string", "description": "Email body (plain text or markdown)" },
+      "from": { "type": "string", "description": "Sender (default: onboarding@resend.dev)" }
+    },
+    "required": ["to", "subject", "body"]
+  }
+}

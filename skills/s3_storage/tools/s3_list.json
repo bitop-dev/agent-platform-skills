@@ -1,0 +1,1 @@
+{"name":"s3_list","description":"List objects in an S3 bucket","parameters":{"type":"object","properties":{"prefix":{"type":"string","description":"Key prefix to filter (optional)"},"max_keys":{"type":"integer","description":"Maximum keys to return (default 100)"}}}}

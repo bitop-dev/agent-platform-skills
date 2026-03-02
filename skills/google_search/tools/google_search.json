@@ -1,0 +1,1 @@
+{"name":"google_search","description":"Search the web using Google Custom Search","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Search query"},"num":{"type":"integer","description":"Number of results (1-10, default 5)"}},"required":["query"]}}

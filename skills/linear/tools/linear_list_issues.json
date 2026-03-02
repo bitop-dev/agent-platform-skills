@@ -1,0 +1,1 @@
+{"name":"linear_list_issues","description":"List Linear issues with optional filters","parameters":{"type":"object","properties":{"team":{"type":"string","description":"Team key to filter by (optional)"},"state":{"type":"string","description":"State filter: Backlog, Todo, In Progress, Done (optional)"},"limit":{"type":"integer","description":"Max results (default 20)"}}}}

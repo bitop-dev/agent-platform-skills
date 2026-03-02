@@ -1,0 +1,1 @@
+{"name":"pd_list_incidents","description":"List PagerDuty incidents","parameters":{"type":"object","properties":{"status":{"type":"string","description":"Filter: triggered, acknowledged, resolved (optional)"},"limit":{"type":"integer","description":"Max results (default 20)"}}}}
