@@ -39,7 +39,7 @@
       "runtime": "wasm",
       "has_tools": true,
       "requires_bins": [],
-      "requires_env": []
+      "requires_env": ["GITHUB_TOKEN"]
     },
     {
       "name": "slack_notify",
@@ -52,7 +52,7 @@
       "runtime": "wasm",
       "has_tools": true,
       "requires_bins": [],
-      "requires_env": []
+      "requires_env": ["SLACK_WEBHOOK_URL"]
     },
     {
       "name": "summarize",
